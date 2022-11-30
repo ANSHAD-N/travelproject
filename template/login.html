@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="Login">
+      <div class="Login-head">
+        <h3>LOGIN</h3>
+      </div>
+
+      <form method="post"  action="{% url 'travelapp:demo' %}">
+          {% csrf_token %}
+
+        <div class="ticker">
+          <h4>Username</h4>
+          <input type="text" name="user_name">
+          <div class="clear"> </div>
+        </div>
+        <div>
+          <h4>Password</h4>
+          <input type="password" name="password">
+          <div class="clear"> </div>
+        </div>
+
+
+        <div class="submit-button">
+            <input type="submit" onclick="myFunction()" value="LOGIN  >">
+        </div>
+            <div class="clear"> </div>
+        </form>
+
+
+    </div>
+</body>
+</html>
